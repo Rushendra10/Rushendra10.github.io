@@ -26,8 +26,8 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "I love programming and research"
   location         : "Pune, Maharashtra, India"
-  employer         : |""Indian Institute of Information
-                      Technology, Sri City""
+  employer         : "Indian Institute of Information\
+                      Technology, Sri City"
   uri              : # URL
   email            : "sidibomma.rushendra@gmail.com" 
 
