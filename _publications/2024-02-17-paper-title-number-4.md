@@ -7,6 +7,7 @@ excerpt: 'This paper proposes a novel framework for improving classification acc
 date: 29-06-2023
 venue: 'IEEE 2023 11th International Symposium on Electronic Systems Devices and Computing (ESDC)'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10149872'
+downloadurl: '/files/Rushendra_camera_ready_paper_ieee_esdc.pdf'
 citation: 'R. Sidibomma and R. K. Sanodiya, "Learning Semantic Representations and Discriminative Features in Unsupervised Domain Adaptation," 2023 11th International Symposium on Electronic Systems Devices and Computing (ESDC), Sri City, India, 2023, pp. 1-6, doi: 10.1109/ESDC56251.2023.10149872.'
 ---
 
