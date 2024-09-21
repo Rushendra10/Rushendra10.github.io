@@ -12,5 +12,13 @@ author_profile: true
 {% endif %}
 
 {% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+  {% if post.property == "tmu" %}
+    {% include archive-single-talk-tmu.html %}
+  {% elsif post.property =="wadla" %}
+    {% include archive-single-talk-wadla.html %}  
+  {% elsif post.property =="wadla" %}
+    {% include archive-single-talk-epoch.html %}  
+  {% else %}
+    {% include archive-single-talk-tmu.html %}  
+  {% endif %}
 {% endfor %}
