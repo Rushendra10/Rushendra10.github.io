@@ -1,11 +1,12 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me..."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July '24. I am a passionate researcher and I love building software components. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I am currently working as a Machine Learning Engineer at AutomationEdge Technologies, where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world.
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
