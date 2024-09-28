@@ -22,10 +22,10 @@ News and Highlights
 - **July 2023**: Completed 12 weeks at TMU, Canada. It was one of the best experiences ever! <br>
 <img src="..//images/my_images/tmu_last_day.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 - **July 2023**: Attended Vector Institute's workshop on Security & Privacy in ML. Met and interacted with Dr. Nicolas Papernot and Dr. Shai Ben-David - a core memory now! <br>
-<img src="..//images/my_images/vector_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/><img src="..//images/my_images/vector_2.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+<img src="..//images/my_images/vector_1.jpg" style="margin-right:0.7em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/><img src="..//images/my_images/vector_2.jpg" style="margin-right:0.7em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 - **May 2023**: Landed in Toronto. Had an amazing first day at TAILab!<br>
-<img src="..//images/my_images/tmu_access_card.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
-<img src="..//images/my_images/tmu_day_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
-<img src="..//images/my_images/toronto_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="10.25%"/>
-<img src="..//images/my_images/toronto_2.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+<img src="..//images/my_images/tmu_access_card.jpg" style="margin-right:0.4em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+<img src="..//images/my_images/tmu_day_1.jpg" style="margin-right:0.4em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+<img src="..//images/my_images/toronto_1.jpg" style="margin-right:0.4em; margin-top:1em; margin-bottom:1em" alt="tmu" width="15%"/>
+<img src="..//images/my_images/toronto_2.jpg" style="margin-right:0.4em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 - **May 2023**: Presented my first conference paper at the 5th IEEE ESDC.
