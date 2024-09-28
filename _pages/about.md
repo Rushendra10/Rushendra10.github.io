@@ -17,7 +17,7 @@ After my junior year, I was selected for the prestigious Mitacs Globalink Resear
 News and Highlights
 ======
 <!-- ![alt text](../images/my_images/tmu_group_1.jpeg) -->
-- **July 2024**: Started at AutomationEdge Technologiesa as a Machine Learning Engineer after the successful completion of a 6 month internship.
+- **July 2024**: Started at AutomationEdge Technologies as a Machine Learning Engineer after the successful completion of a 6 month internship.
 - **June 2024**: Graduated from IIT Sri City with a Bachelors in Computer Science and Engineering with Honors.
 - **July 2023**: Completed 12 weeks at TMU, Canada. It was one of the best experiences ever! <br>
 <img src="..//images/my_images/tmu_last_day.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
@@ -26,6 +26,6 @@ News and Highlights
 - **May 2023**: Landed in Toronto. Had an amazing first day at TAILab!<br>
 <img src="..//images/my_images/tmu_access_card.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 <img src="..//images/my_images/tmu_day_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
-<img src="..//images/my_images/toronto_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width=10.25%/>
+<img src="..//images/my_images/toronto_1.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="10.25%"/>
 <img src="..//images/my_images/toronto_2.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 - **May 2023**: Presented my first conference paper at the 5th IEEE ESDC.
