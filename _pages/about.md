@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "About Me..."
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July 2024. I am a passionate researcher and I love building software solutions. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I am currently working as a Machine Learning Engineer at [AutomationEdge Technologies](https://automationedge.com/), where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world. I regularly engage in research activities and am actively looking for opportunities to pursue a research-oriented Masters program.
+I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July 2024. I am a passionate researcher and I love building software solutions. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I currently work as a Machine Learning Engineer at [AutomationEdge Technologies](https://automationedge.com/), where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world. I regularly engage in research activities and am actively looking for opportunities to pursue a research-oriented Masters program.
 
 As a part of the Honors program in my Bachelors degree, I have worked as an undergraduate research assistant under the guidance of [Dr. Rakesh Sanodiya](https://www.iiits.ac.in/people/regular-faculty/dr-rakesh-kumar-sanodiya/) (Assistant Professor, IIITS) at the Robotics Lab of IIIT Sri City. During this time, I primarily worked around transfer learning and computer vision. It was a great learning experience and played a key role in building a strong foundation for my future aspirations. I published a paper introducing a new loss function for training domain-agnostic image classification models, improving the average classification accuracy across all tasks.
 <!-- , which got 2 citations from articles published at reputed conferences within a year. -->
