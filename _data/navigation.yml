@@ -20,8 +20,8 @@ main:
   - title: "Blog Posts"
     url: /blogs/
     
-  - title: "Resume"
-    url: /files/Rushendra_Sidibomma_Resume.pdf
+  - title: "CV"
+    url: /files/Rushendra_Sidibomma_CV.pdf
     
   # - title: "Guide"
   #   url: /markdown/

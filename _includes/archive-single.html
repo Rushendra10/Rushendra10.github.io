@@ -55,13 +55,13 @@
     {% if post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
-      <p><b>Recommended citation</b>: {{ post.citation }}<br /><br><a href="{{ post.downloadurl }}">Download Paper</a> | <a href="{{ post.paperurl }}">IEEE Explore Link</a></p>
+      <p><b>Recommended citation</b>: {{ post.citation }}<br /><br><a href="{{ post.downloadurl }}">Download Paper</a> | <a href="{{ post.paperurl }}">Publication Link</a></p>
     {% elsif post.citation and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation %}
       <p><b>Recommended citation</b>: {{ post.citation }}</p>
     {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">IEEE Xplore Link</a></p>
+      <p><a href=" {{ post.paperurl }} ">Publication Link</a></p>
     {% elsif post.downloadurl %}
       <p><a href=" {{ post.downloadurl }} ">Download Paper</a></p>
     {% elsif post.slidesurl %}

@@ -1,15 +1,15 @@
 ---
-title: "Learning Semantic Representations and Discriminative Features in Unsupervised Domain Adaptation"
+title: "Hate Speech Detection and Target Identification in Devanagari Languages via Parameter Efficient Fine-Tuning of LLMs"
 collection: publications
 category: conferences
-permalink: /publication/JDSTN
-excerpt: 'This paper proposes a novel framework for improving classification accuracy in unsupervised domain adaptation across various tasks in vision datasets. It uses an approach analogous to the baseline model and incorporates new terms in the loss function to improve the alignment of source and target images in the feature space.'
-date: 29-06-2023
-venue: 'IEEE 2023 11th International Symposium on Electronic Systems Devices and Computing (ESDC)'
+permalink: /publication/Hate_Speech_Devanagari
+excerpt: 'We developed a system using LLMs for date speech detection and target identification in Devanagari-script languages (low resource languages). Our approach leverages quantized LLMs with parameter-efficient fine-tuning (PEFT) techniques to achieve a highly resource-optimized pipeline. Our system demonstrated a strong performance on the challenging low-resource tasks while utilizing one of the lowest compute footprints among the other studies.'
+date: 22-12-2024
+venue: 'Proceedings of the First Workshop on Challenges in Processing South Asian Languages (CHiPSAL), COLING 2025'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10149872'
-downloadurl: '/files/Rushendra_camera_ready_paper_ieee_esdc.pdf'
-citation: 'R. Sidibomma and R. K. Sanodiya, "Learning Semantic Representations and Discriminative Features in Unsupervised Domain Adaptation," 2023 11th International Symposium on Electronic Systems Devices and Computing (ESDC), Sri City, India, 2023, pp. 1-6, doi: 10.1109/ESDC56251.2023.10149872.'
+downloadurl: 'files/2412.17131v1.pdf'
+citation: 'Sidibomma, R., Patwa, P., Patwa, P., Chadha, A., Jain, V., & Das, A. (2025, January). Hate Speech Detection and Target Identification in Devanagari Languages via Parameter Efficient Fine-Tuning of LLMs. Proceedings of the First Workshop on Challenges in Processing South Asian Languages (CHiPSAL).'
 ---
 
 **Abstract**
-In domain adaptation, the goal is to train a neural network on the source domain and obtain a good accuracy on the target domain. In such a scenario, it is important to transfer the knowledge from the labelled source domain to the unlabelled target domain due to the expensive cost of manual labelling. Following the trail of works in the recent time, feature level alignment seems to be the most promising direction in unsupervised domain adaptation. In most of the recent works using this feature alignment, the semantic information present in the labelled source domain has not been exploited. Among the works that have tried to learn this semantic representations, the discriminative features have not been taken into consideration which results in lower accuracy on target domain. In this paper, we present a novel approach, joint discriminative and semantic transfer network (JDSTN) that not only aligns the semantic representations of source and target domain, but also enhances the discriminative features and thereby improving the accuracy significantly. This is achieved by using pseudo-labels to align the feature centroids of source and target domains while introducing losses that promote the learning of discriminative features.
+The detection of hate speech has become increasingly important in combating online hostility and its real-world consequences. Despite recent advancements, there is limited research addressing hate speech detection in Devanagari-scripted languages, where resources and tools are scarce. While large language models (LLMs) have shown promise in language-related tasks, traditional fine-tuning approaches are often infeasible given the size of the models. In this paper, we propose a Parameter Efficient Fine tuning (PEFT) based solution for hate speech detection and target identification. We evaluate multiple LLMs on the Devanagari dataset provided by (Thapa et al., 2025), which contains annotated instances in 2 languages - Hindi and Nepali. The results demonstrate the efficacy of our approach in handling Devanagari-scripted content.
