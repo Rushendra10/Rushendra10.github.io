@@ -7,7 +7,7 @@ excerpt: 'We developed a system using LLMs for date speech detection and target 
 date: 22-12-2024
 venue: 'Proceedings of the First Workshop on Challenges in Processing South Asian Languages (CHiPSAL), COLING 2025'
 paperurl: 'https://arxiv.org/abs/2412.17131'
-downloadurl: 'files/2412.17131v1.pdf'
+downloadurl: '/files/2412.17131v1.pdf'
 citation: 'Sidibomma, R., Patwa, P., Patwa, P., Chadha, A., Jain, V., & Das, A. (2025, January). Hate Speech Detection and Target Identification in Devanagari Languages via Parameter Efficient Fine-Tuning of LLMs. Proceedings of the First Workshop on Challenges in Processing South Asian Languages (CHiPSAL).'
 ---
 
