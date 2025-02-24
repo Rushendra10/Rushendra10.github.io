@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July 2024. I am a passionate researcher and I love building software solutions. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I currently work as a Machine Learning Engineer at [AutomationEdge Technologies](https://automationedge.com/), where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world. I regularly engage in research activities and am actively looking for opportunities to pursue a research-oriented Masters program.
+I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July 2024. I am a passionate researcher and I love building software solutions. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I currently work as a Machine Learning Research Engineer at [AutomationEdge Technologies](https://automationedge.com/), where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world. I regularly engage in research activities and am actively looking for opportunities to pursue a research-oriented Masters program.
 
 As a part of the Honors program in my Bachelors degree, I have worked as an undergraduate research assistant under the guidance of [Dr. Rakesh Sanodiya](https://www.iiits.ac.in/people/regular-faculty/dr-rakesh-kumar-sanodiya/) (Assistant Professor, IIITS) at the Robotics Lab of IIIT Sri City. During this time, I primarily worked around transfer learning and computer vision. I developed a framework for training domain-agnostic image classification models, improving the average classification accuracy across all tasks.
 <!-- , which got 2 citations from articles published at reputed conferences within a year. -->
@@ -19,7 +19,7 @@ News and Highlights
 ======
 <!-- ![alt text](../images/my_images/tmu_group_1.jpeg) -->
 - **December 2025**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) 
-- **July 2024**: Joined AutomationEdge Technologies as a **Machine Learning Engineer**, after the successful completion of a 6 month internship.
+- **July 2024**: Joined AutomationEdge Technologies as a **Machine Learning Research Engineer**, after the successful completion of a 6 month internship.
 - **June 2024**: Graduated from IIT Sri City with a Bachelors in **Computer Science and Engineering with Honors**.
 - **July 2023**: Completed 12 weeks of full-time research at **Trustworthy AI Lab, TMU, Canada**. Couldn't have asked for a more rewarding experience.  <br>
 <img src="..//images/my_images/tmu_last_day.jpg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
