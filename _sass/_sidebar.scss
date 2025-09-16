@@ -185,6 +185,9 @@
   display: none;
   position: absolute;
   right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 15px;
   padding: 10px;
   list-style-type: none;
