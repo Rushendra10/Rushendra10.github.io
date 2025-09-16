@@ -6,19 +6,19 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I recently graduated with a Bachelors in Computer Science and Engineering with Honors from the Indian Institute of Information Technology, Sri City (IIIT Sri City) in July 2024. I am a passionate researcher and I love building software solutions. My research interests lie in Computer Vision, Machine Learning (ML), Natural Language Processing and ML Privacy. I currently work as a Machine Learning Research Engineer at [AutomationEdge Technologies](https://automationedge.com/), where I build Generative AI solutions primarily focused on automating tasks in the healthcare industry and for insurance companies. This strongly aligns with my goals to create machine learning applications that create a positive impact in the real world. I regularly engage in research activities and am actively looking for opportunities to pursue a research-oriented Masters program.
 
-As a part of the Honors program in my Bachelors degree, I have worked as an undergraduate research assistant under the guidance of [Dr. Rakesh Sanodiya](https://www.iiits.ac.in/people/regular-faculty/dr-rakesh-kumar-sanodiya/) (Assistant Professor, IIITS) at the Robotics Lab of IIIT Sri City. During this time, I primarily worked around transfer learning and computer vision. I developed a framework for training domain-agnostic image classification models, improving the average classification accuracy across all tasks.
-<!-- , which got 2 citations from articles published at reputed conferences within a year. -->
+I am currently pursuing a Master’s in Computer Science at the University of Minnesota, Twin Cities, with a focus on machine learning and data-driven applications. I have a strong foundation in computer science and practical experience in building AI solutions, particularly in healthcare. My work spans machine learning, computer vision, natural language processing, and privacy-aware AI, with an emphasis on creating real-world impact.
 
-At the end of my junior year, I was selected for the prestigious Mitacs Globalink Research Internship program. This program connects international students with faculties at Canadian universities and funds them to spend 12 weeks at their host university as a research assistant. I was fortunate to be a part of [Dr. Reza Samavi](https://ee.ryerson.ca/~samavi/)'s (Associate Professor, Toronto Metropolitan University) research group at the Trustworthy AI Lab ( [TAILab ](https://www.ee.ryerson.ca/~samavi/research.html)). There, I worked on the security aspects of ML models, focused on certifying the robustness in multilayer neural networks. I continue to work with the research group at TAILab as we continue to work on critical security aspects and robustness guarantees of ML models. 
+I previously completed my Bachelor’s in Computer Science and Engineering with Honors from IIIT Sri City, where I gained research experience in transfer learning, image classification, and ML model robustness. I also work as a Machine Learning Research Engineer at AutomationEdge Technologies, developing generative AI solutions to automate tasks in healthcare and insurance.
 
-I usually spend my free time playing sports or trekking with my friends. I've been playing football since I was 12 and it's my to-go activity whenever I want to clear my head or relax. Throughout my high school and university, I've been a part of the football team and they're one of the most fulfilling moments that I can recall. Besides sports, I enjoy watching documentaries about history and major events.
+I am always on the lookout for opportunities in data science, machine learning engineering, and backend development, where I can combine research expertise and engineering skills to drive practical and impactful solutions.
 
 News and Highlights
 ======
 <!-- ![alt text](../images/my_images/tmu_group_1.jpeg) -->
-- **December 2025**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) 
+- **September 2025**: Joined University of Minnesota as an MS Computer Science student. Exciting times ahead!  
+<img src="..//images/latest_profile_picture.jpeg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+- **December 2024**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) 
 - **July 2024**: Joined AutomationEdge Technologies as a **Machine Learning Research Engineer**, after the successful completion of a 6 month internship.
 - **June 2024**: Graduated from IIT Sri City with a Bachelors in **Computer Science and Engineering with Honors**.
 - **July 2023**: Completed 12 weeks of full-time research at **Trustworthy AI Lab, TMU, Canada**. Couldn't have asked for a more rewarding experience.  <br>

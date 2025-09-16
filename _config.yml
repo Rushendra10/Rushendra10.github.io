@@ -21,12 +21,12 @@ repository               : "Rushendra/Rushendra10.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_picture.jpg"
+  avatar           : "latest_profile_picture.jpeg"
   name             : "Rushendra Sidibomma"
   pronouns         : # example: "she/her"  
   bio              : "I'm a passionate programmer and an avid researcher"
-  location         : "Pune, Maharashtra, India"
-  employer         : "Indian Institute of Information Technology, Sri City"
+  location         : "Minneapolis, MN"
+  employer         : "University of Minnesota Twin-Cities"
   uri              : # URL
   email            : "sidibomma.rushendra@gmail.com" 
 
