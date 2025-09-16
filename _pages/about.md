@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am currently pursuing a Master’s in Computer Science at the University of Minnesota, Twin Cities, with a focus on machine learning and data-driven applications. I have a strong foundation in computer science and practical experience in building AI solutions, particularly in healthcare. My work spans machine learning, computer vision, natural language processing, and privacy-aware AI, with an emphasis on creating real-world impact.
+I am currently pursuing a Master’s in Computer Science at the University of Minnesota, Twin Cities, with a focus on machine learning and data-driven applications. I have extensive research and industry experience in building AI solutions, particularly in healthcare. My work spans across Generative AI technology, computer vision, natural language processing, and trustworthy machine learning.
 
-I previously completed my Bachelor’s in Computer Science and Engineering with Honors from IIIT Sri City, where I gained research experience in transfer learning, image classification, and ML model robustness. I also work as a Machine Learning Research Engineer at AutomationEdge Technologies, developing generative AI solutions to automate tasks in healthcare and insurance.
+I received my Bachelor’s in Computer Science and Engineering with Honors from IIIT Sri City, where I gained research experience in transfer learning, image classification, and ML model robustness. I was also awarded the MITACS Globalink fellowship (CAN $9,000) which gave me the opportunity to work in-person at Trustworthy AI Lab at Toronto Metropolitan University, Canada. Before starting graduate school, I worked as a Machine Learning Research Engineer at AutomationEdge Technologies, developing generative AI solutions to automate tasks in healthcare, with direct impact on improving the quality of patient care and optimizing intake workflows.
 
-I am always on the lookout for opportunities in data science, machine learning engineering, and backend development, where I can combine research expertise and engineering skills to drive practical and impactful solutions.
+I am always on the lookout for opportunities in data science, machine learning engineering, and backend development. Please feel free to reach out to discuss collaboration on projects or other potential opportunities.
 
 News and Highlights
 ======
