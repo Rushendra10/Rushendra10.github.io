@@ -21,7 +21,7 @@ repository               : "Rushendra/Rushendra10.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "latest_profile_picture.jpeg"
+  avatar           : "umn_profile_picture.png"
   name             : "Rushendra Sidibomma"
   pronouns         : # example: "she/her"  
   bio              : "I'm a passionate programmer and an avid researcher"

@@ -17,7 +17,7 @@ News and Highlights
 ======
 <!-- ![alt text](../images/my_images/tmu_group_1.jpeg) -->
 - **September 2025**: Joined University of Minnesota as an MS Computer Science student. Exciting times ahead!  
-<img src="..//images/latest_profile_picture.jpeg" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
+<img src="..//images/my_images/umn_profile_picture.png" style="margin-right:1em; margin-top:1em; margin-bottom:1em" alt="tmu" width="250"/>
 - **December 2024**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) 
 - **July 2024**: Joined AutomationEdge Technologies as a **Machine Learning Research Engineer**, after the successful completion of a 6 month internship.
 - **June 2024**: Graduated from IIT Sri City with a Bachelors in **Computer Science and Engineering with Honors**.
