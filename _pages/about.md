@@ -16,8 +16,9 @@ I am always on the lookout for opportunities in data science, machine learning e
 News and Highlights
 ======
 <!-- ![alt text](../images/my_images/tmu_group_1.jpeg) -->
+- **January 2026** Our paper titled "Cascading Robustness Verification: Toward Efficient Model-Agnostic Certification" has been accepted at the Conference on Secure and Trustworthy Machine Learning (SaTML) 2026. A meaningful closure to a project what we have been working for over two years! [arXiv](https://arxiv.org/abs/2602.04236) 
 - **September 2025**: Joined University of Minnesota as an MS Computer Science student. Exciting times ahead!
-- **December 2024**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) 
+- **December 2024**: Our paper on **Hate Speech and Target Identification in Devanagari Script Languages** has been accepted at the CHiPSAL workship at the International Conference on Computational Linguistics (COLING) 2025. [arXiv](https://arxiv.org/abs/2412.17131) [ACL Anthology](https://aclanthology.org/2025.chipsal-1.34/)
 - **July 2024**: Joined AutomationEdge Technologies as a **Machine Learning Research Engineer**, after the successful completion of a 6 month internship.
 - **June 2024**: Graduated from IIIT Sri City with a Bachelors in **Computer Science and Engineering with Honors**.
 - **July 2023**: Completed 12 weeks of full-time research at **Trustworthy AI Lab, TMU, Canada**. Couldn't have asked for a more rewarding experience.  <br>

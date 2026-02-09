@@ -1,0 +1,15 @@
+---
+title: "Cascading Robustness Verification: Toward Efficient Model-Agnostic Certification"
+collection: publications
+category: conferences
+permalink: /publication/CRV
+excerpt: 'Certifying neural network robustness is computationally expensive, and existing scalable verifiers often underestimate robustness due to loose approximations. We propose Cascading Robustness Verification (CRV), a model-agnostic framework that progressively applies multiple verification methods to balance tightness and computational cost. CRV halts early when certification is achieved and introduces a stepwise relaxation strategy to avoid unnecessary computation. Both theoretical and empirical results show that CRV matches or exceeds benchmark verified accuracy while reducing runtime by up to 90%.'
+date: 04-02-2026
+venue: 'IEEE Conference on Secure and Trustworthy Machine Learning (SaTML) 2026'
+paperurl: 'https://arxiv.org/abs/2602.04236'
+downloadurl: '/files/CRV_arxiv.pdf'
+citation: 'Maleki, M., Sidibomma, R., Adibi, A. and Samavi, R., 2026. Cascading Robustness Verification: Toward Efficient Model-Agnostic Certification. arXiv preprint arXiv:2602.04236.'
+---
+
+**Abstract**
+Certifying neural network robustness against adversarial examples is challenging, as formal guarantees often require solving non-convex problems. Hence, incomplete verifiers are widely used because they scale efficiently and substantially reduce the cost of robustness verification compared to complete methods. However, relying on a single verifier can underestimate robustness because of loose approximations or misalignment with training methods. In this work, we propose Cascading Robustness Verification (CRV), which goes beyond an engineering improvement by exposing fundamental limitations of existing robustness metric and introducing a framework that enhances both reliability and efficiency. CRV is a model-agnostic verifier, meaning that its robustness guarantees are independent of the model's training process. The key insight behind the CRV framework is that, when using multiple verification methods, an input is certifiably robust if at least one method certifies it as robust. Rather than relying solely on a single verifier with a fixed constraint set, CRV progressively applies multiple verifiers to balance the tightness of the bound and computational cost. Starting with the least expensive method, CRV halts as soon as an input is certified as robust; otherwise, it proceeds to more expensive methods. For computationally expensive methods, we introduce a Stepwise Relaxation Algorithm (SR) that incrementally adds constraints and checks for certification at each step, thereby avoiding unnecessary computation. Our theoretical analysis demonstrates that CRV achieves equal or higher verified accuracy compared to powerful but computationally expensive incomplete verifiers in the cascade, while significantly reducing verification overhead. Empirical results confirm that CRV certifies at least as many inputs as benchmark approaches, while improving runtime efficiency by up to ~90%.
