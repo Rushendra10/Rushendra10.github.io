@@ -1,0 +1,69 @@
+---
+import NewsRail from "./NewsRail.astro";
+import { profile } from "../data/profile";
+
+const quickLinks = [
+  { label: "Resume", href: profile.links.resume },
+  { label: "CV", href: profile.links.cv },
+  { label: "Email", href: profile.links.email },
+  { label: "LinkedIn", href: profile.links.linkedin },
+  { label: "Scholar", href: profile.links.scholar },
+  { label: "GitHub", href: profile.links.github },
+];
+---
+
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero__grid">
+    <div>
+      <p class="eyebrow">{profile.affiliation}</p>
+      <h1 id="hero-title">{profile.name}</h1>
+      <p class="hero__lead">{profile.summary}</p>
+
+      <div class="hero__status">
+        <span class="hero__status-dot" aria-hidden="true"></span>
+        <span>{profile.availability}</span>
+      </div>
+
+      <div class="hero__actions" aria-label="Primary links">
+        <a class="button button--primary" href={profile.links.resume} target="_blank" rel="noreferrer">
+          Resume
+        </a>
+        <a class="button button--secondary" href={profile.links.cv} target="_blank" rel="noreferrer">
+          CV
+        </a>
+        <a class="button button--secondary" href="#experience">Experience</a>
+      </div>
+
+      <div class="hero__meta" aria-label="Contact and location">
+        <span>{profile.location}</span>
+        <a href={profile.links.email}>Email</a>
+        <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href={profile.links.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
+      </div>
+    </div>
+
+    <div class="hero__card">
+      <div class="portrait-card">
+        <div class="portrait-card__image">
+          <img src={profile.photo} alt={`Portrait of ${profile.name}`} loading="eager" />
+        </div>
+        <div class="portrait-card__body">
+          <p class="portrait-card__name">{profile.name}</p>
+          <p class="portrait-card__detail">{profile.role} at {profile.affiliation}</p>
+        </div>
+      </div>
+
+      <div class="quick-links" aria-label="Profile links">
+        {
+          quickLinks.map((item) => (
+            <a class="quick-link" href={item.href} target={item.href.startsWith("mailto:") ? undefined : "_blank"} rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}>
+              {item.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <NewsRail />
+    </div>
+  </div>
+</section>

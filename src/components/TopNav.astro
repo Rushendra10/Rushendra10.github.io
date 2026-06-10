@@ -1,0 +1,30 @@
+---
+import { navigation, profile } from "../data/profile";
+---
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Primary navigation">
+    <a class="brand" href="#main" aria-label={`${profile.name} home`}>
+      <span class="brand__name">{profile.name}</span>
+      <span class="brand__role">{profile.role}</span>
+    </a>
+
+    <div class="nav__links">
+      {
+        navigation.map((item) => (
+          <a
+            class:list={[
+              "nav__link",
+              item.label === "Resume" && "nav__link--primary",
+            ]}
+            href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noreferrer" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>

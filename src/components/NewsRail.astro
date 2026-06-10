@@ -1,0 +1,32 @@
+---
+import { news } from "../data/news";
+
+const latestNews = news.slice(0, 3);
+---
+
+<aside class="news-rail" aria-labelledby="latest-news-title">
+  <div class="news-rail__header">
+    <h2 class="news-rail__title" id="latest-news-title">Latest News</h2>
+    <span class="news-rail__hint">Selected updates</span>
+  </div>
+
+  <ul class="news-list">
+    {
+      latestNews.map((item) => (
+        <li class="news-item">
+          <span class="news-item__date">{item.date}</span>
+          {
+            item.href ? (
+              <a class="news-item__title" href={item.href} target="_blank" rel="noreferrer">
+                {item.title}
+              </a>
+            ) : (
+              <span class="news-item__title">{item.title}</span>
+            )
+          }
+          <p class="news-item__description">{item.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

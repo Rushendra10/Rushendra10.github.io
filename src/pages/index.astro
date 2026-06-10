@@ -1,17 +1,50 @@
 ---
-
+import Hero from "../components/Hero.astro";
+import SectionShell from "../components/SectionShell.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile } from "../data/profile";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={`${profile.name} | Applied AI and Machine Learning`} description={profile.summary}>
+  <Hero />
+
+  <SectionShell
+    id="skills"
+    kicker="Skills"
+    title="Grouped technical strengths"
+    intro="A concise skills map will sit here, grouped by machine learning, LLM systems, backend engineering, data infrastructure, and research tooling."
+    placeholder="Next pass: build a logo-backed skills grid from src/data/skills.ts with compact grouping and scanning-first labels."
+  />
+
+  <SectionShell
+    id="experience"
+    kicker="Experience"
+    title="Internships, research, and fellowships"
+    intro="Experience will be separated from education and presented as an expandable timeline so a recruiter can skim roles first, then open details when needed."
+    placeholder="Next pass: create expandable role cards from src/data/experience.ts and a separate education band from src/data/education.ts."
+  />
+
+  <SectionShell
+    id="publications"
+    kicker="Publications"
+    title="Research outputs"
+    intro="Publications will emphasize venue, year, contribution area, and quick links to paper pages or PDFs without making the page feel dense."
+    placeholder="Next pass: render src/data/publications.ts as clean publication rows with links, tags, and compact abstracts."
+  />
+
+  <SectionShell
+    id="projects"
+    kicker="Projects"
+    title="Selected technical work"
+    intro="Project cards will stay modular so we can replace placeholders with stronger job-search-focused case studies as you choose what to feature."
+    placeholder="Next pass: add project templates from src/data/projects.ts with outcomes, stack, and links."
+  />
+
+  <SectionShell
+    id="talks"
+    kicker="Talks"
+    title="Presentations and teaching"
+    intro="Talks will remain distinct from publications so invited talks, seminars, and presentations have their own clean place."
+    placeholder="Next pass: render src/data/talks.ts as compact talk entries with event, location, and links where available."
+  />
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import TopNav from "../components/TopNav.astro";
+import { profile } from "../data/profile";
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = `${profile.name} | Portfolio`,
+  description = profile.summary,
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <TopNav />
+      <main id="main">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="container">
+          <span>&copy; {currentYear} {profile.name}</span>
+          <a href={profile.links.email}>sidibomma.rushendra@gmail.com</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
