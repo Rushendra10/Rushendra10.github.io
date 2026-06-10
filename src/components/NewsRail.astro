@@ -2,44 +2,28 @@
 import { news } from "../data/news";
 
 const latestNews = news.slice(0, 3);
-const olderNews = news.slice(3);
+
+function getShortDate(date: string) {
+  const [month, year] = date.split(" ");
+  return `${month.slice(0, 3)} '${year.slice(-2)}`;
+}
 ---
 
-<aside class="news-rail" aria-labelledby="latest-news-title">
-  <div class="news-rail__header">
-    <h2 class="news-rail__title" id="latest-news-title">Latest News</h2>
-    <span class="news-rail__hint">Selected updates</span>
-  </div>
+<aside class="news-float" aria-labelledby="latest-news-title">
+  <button class="news-float__label" type="button" data-news-open>
+    <span id="latest-news-title">News</span>
+  </button>
 
-  <ul class="news-list">
+  <div class="news-float__items" aria-label="Latest updates">
     {
       latestNews.map((item) => (
-        <li class="news-item">
-          <span class="news-item__date">{item.date}</span>
-          {
-            item.href ? (
-              <a class="news-item__title" href={item.href} target="_blank" rel="noreferrer">
-                {item.title}
-              </a>
-            ) : (
-              <span class="news-item__title">{item.title}</span>
-            )
-          }
-          <p class="news-item__description">{item.description}</p>
-        </li>
+        <button class="news-float__item" type="button" data-news-open>
+          <span>{getShortDate(item.date)}</span>
+          <strong>{item.title}</strong>
+        </button>
       ))
     }
-  </ul>
-
-  {
-    olderNews.length > 0 && (
-      <div class="news-rail__footer">
-        <button class="news-rail__button" type="button" data-news-open>
-          View older updates
-        </button>
-      </div>
-    )
-  }
+  </div>
 
   <dialog class="news-dialog" data-news-dialog aria-labelledby="news-dialog-title">
     <div class="news-dialog__top">
@@ -75,14 +59,16 @@ const olderNews = news.slice(3);
 </aside>
 
 <script>
-  const newsOpenButton = document.querySelector("[data-news-open]");
+  const newsOpenButtons = document.querySelectorAll("[data-news-open]");
   const newsDialog = document.querySelector("[data-news-dialog]");
   const newsCloseButton = document.querySelector("[data-news-close]");
 
-  newsOpenButton?.addEventListener("click", () => {
-    if (newsDialog instanceof HTMLDialogElement) {
-      newsDialog.showModal();
-    }
+  newsOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (newsDialog instanceof HTMLDialogElement) {
+        newsDialog.showModal();
+      }
+    });
   });
 
   newsCloseButton?.addEventListener("click", () => {
