@@ -1,110 +1,42 @@
 ---
+import SkillIcon from "./SkillIcon.astro";
 import { skillGroups } from "../data/skills";
 
 const groupMeta: Record<
   string,
   {
-    description: string;
     span: "compact" | "medium" | "wide" | "full";
     tone: "blue" | "gold" | "green" | "rose" | "teal";
   }
 > = {
-  Languages: {
-    description: "Core languages I use across modeling, backend systems, automation, and data work.",
+  "Programming Languages": {
     span: "compact",
     tone: "teal",
   },
-  "LLMs / Document AI": {
-    description: "Tools and methods for building useful LLM workflows over unstructured documents and multimodal inputs.",
+  "LLMs & Agents": {
     span: "wide",
     tone: "blue",
   },
-  "ML / AI": {
-    description: "Modeling, fine-tuning, computer vision, and production-minded ML workflows.",
+  "ML Frameworks": {
     span: "medium",
     tone: "gold",
   },
-  "Backend / APIs": {
-    description: "API and service patterns for shipping AI capabilities inside real products.",
+  "Backend & APIs": {
     span: "compact",
     tone: "green",
   },
-  "Databases / Infrastructure": {
-    description: "Storage, cloud, deployment, and developer tooling that keep systems dependable.",
+  "Data & Infrastructure": {
     span: "full",
     tone: "rose",
   },
 };
-
-const skillMarks: Record<string, string> = {
-  "Agent Orchestration": "AO",
-  "API Design": "AD",
-  "Async Workers": "AW",
-  "Azure": "AZ",
-  "Bash": "$",
-  "CI/CD": "CI",
-  "Computer Vision": "CV",
-  "Django": "DJ",
-  "Docker": "DK",
-  "Document AI": "DA",
-  "FastAPI": "FA",
-  "Fine-tuning": "FT",
-  "Git": "GIT",
-  "Go": "GO",
-  "Hugging Face": "HF",
-  "Java": "JVM",
-  "JavaScript": "JS",
-  "Linux": "LX",
-  "LLM Evaluation": "EV",
-  "LoRA": "LoRA",
-  "Microservices": "MS",
-  "MLOps": "ML",
-  "MongoDB": "MDB",
-  "MySQL": "SQL",
-  "Node.js": "NODE",
-  "PostgreSQL": "PG",
-  "Python": "PY",
-  "PyTorch": "PT",
-  "RAPIDS": "GPU",
-  "Redis": "RD",
-  "REST APIs": "API",
-  "Scikit-Learn": "SK",
-  "Structured Extraction": "{}",
-  "Tool Use": "TU",
-  "Transformers": "TF",
-  "Vision-Language Models": "VL",
-};
-
-function getSkillMark(name: string) {
-  if (skillMarks[name]) {
-    return skillMarks[name];
-  }
-
-  if (name.length <= 4) {
-    return name.toUpperCase();
-  }
-
-  return name
-    .split(/[\s/-]+/)
-    .filter(Boolean)
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
 ---
 
 <section class="section skills-section" id="skills" aria-labelledby="skills-title">
   <div class="container">
-    <div class="section__header">
-      <div>
-        <p class="section__kicker">Skills</p>
-        <h2 class="section__title" id="skills-title">Technical strengths</h2>
-      </div>
-      <p class="section__intro">
-        A concise map of the tools and systems I reach for most often across applied AI,
-        agentic workflows, backend engineering, and infrastructure.
-      </p>
+    <div class="skills-heading">
+      <h2 id="skills-title">Skills</h2>
+      <span aria-hidden="true"></span>
     </div>
 
     <div class="skills-pattern" aria-label="Grouped technical skills">
@@ -122,19 +54,14 @@ function getSkillMark(name: string) {
             >
               <div class="skill-card__top">
                 <span class="skill-card__index">{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{group.title}</h3>
-                  <p>{meta.description}</p>
-                </div>
+                <h3>{group.title}</h3>
               </div>
 
               <ul class="skill-chip-list">
                 {
                   group.skills.map((skill) => (
                     <li class="skill-chip">
-                      <span class="skill-chip__mark" aria-hidden="true">
-                        {getSkillMark(skill.name)}
-                      </span>
+                      <SkillIcon icon={skill.icon} />
                       <span>{skill.name}</span>
                     </li>
                   ))
