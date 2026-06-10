@@ -5,7 +5,7 @@ export const profile = {
   location: "Minneapolis, MN",
   photo: "/images/umn_profile_picture.png",
   summary:
-    "Machine learning researcher and engineer focused on trustworthy ML, generative AI, computer vision, NLP, and data-driven healthcare applications.",
+    "I build production-minded AI systems across agentic workflows, LLM applications, computer vision, and healthcare-focused machine learning.",
   availability: "Open to ML, applied AI, and backend roles.",
   links: {
     email: "mailto:sidibomma.rushendra@gmail.com",
