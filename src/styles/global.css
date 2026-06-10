@@ -189,6 +189,20 @@ main {
   line-height: 1.55;
 }
 
+.hero__bio {
+  display: grid;
+  max-width: 760px;
+  gap: 12px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.62;
+}
+
+.hero__bio p {
+  margin: 0;
+}
+
 .hero__status {
   display: inline-flex;
   align-items: center;
