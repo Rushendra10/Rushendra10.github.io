@@ -1,6 +1,7 @@
 ---
 import Hero from "../components/Hero.astro";
 import SectionShell from "../components/SectionShell.astro";
+import SkillsSection from "../components/SkillsSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { profile } from "../data/profile";
 ---
@@ -8,13 +9,7 @@ import { profile } from "../data/profile";
 <BaseLayout title={`${profile.name} | Applied AI and Machine Learning`} description={profile.summary}>
   <Hero />
 
-  <SectionShell
-    id="skills"
-    kicker="Skills"
-    title="Grouped technical strengths"
-    intro="A concise skills map will sit here, grouped by machine learning, LLM systems, backend engineering, data infrastructure, and research tooling."
-    placeholder="Next pass: build a logo-backed skills grid from src/data/skills.ts with compact grouping and scanning-first labels."
-  />
+  <SkillsSection />
 
   <SectionShell
     id="experience"
