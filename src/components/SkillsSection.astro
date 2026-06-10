@@ -5,28 +5,22 @@ import { skillGroups } from "../data/skills";
 const groupMeta: Record<
   string,
   {
-    span: "compact" | "medium" | "wide" | "full";
     tone: "blue" | "gold" | "green" | "rose" | "teal";
   }
 > = {
   "Programming Languages": {
-    span: "compact",
     tone: "teal",
   },
   "LLMs & Agents": {
-    span: "wide",
     tone: "blue",
   },
   "ML Frameworks": {
-    span: "medium",
     tone: "gold",
   },
   "Backend & APIs": {
-    span: "compact",
     tone: "green",
   },
   "Data & Infrastructure": {
-    span: "full",
     tone: "rose",
   },
 };
@@ -41,19 +35,17 @@ const groupMeta: Record<
 
     <div class="skills-pattern" aria-label="Grouped technical skills">
       {
-        skillGroups.map((group, index) => {
+        skillGroups.map((group) => {
           const meta = groupMeta[group.title];
 
           return (
             <article
               class:list={[
-                "skill-card",
-                `skill-card--${meta.span}`,
-                `skill-card--${meta.tone}`,
+                "skill-row",
+                `skill-row--${meta.tone}`,
               ]}
             >
-              <div class="skill-card__top">
-                <span class="skill-card__index">{String(index + 1).padStart(2, "0")}</span>
+              <div class="skill-row__title">
                 <h3>{group.title}</h3>
               </div>
 
