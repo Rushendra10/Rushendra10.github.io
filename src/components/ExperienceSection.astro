@@ -28,8 +28,6 @@ function getSortValue(date: string) {
 const orderedExperience = [...experience].sort(
   (a, b) => getSortValue(b.end) - getSortValue(a.end),
 );
-
-const spread = orderedExperience.length > 1 ? 70 / (orderedExperience.length - 1) : 0;
 ---
 
 <section class="section experience-section" id="experience" aria-labelledby="experience-title">
@@ -40,34 +38,42 @@ const spread = orderedExperience.length > 1 ? 70 / (orderedExperience.length - 1
     </div>
 
     <div class="experience-path" aria-label="Experience timeline">
-      <svg class="experience-rail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M8 90 C 26 74 38 66 50 50 S 74 20 92 10"></path>
-      </svg>
-
       {
-        orderedExperience.map((item, index) => {
-          const markerX = Math.round(86 - index * spread);
-          const side = markerX > 56 ? "left" : "right";
+        orderedExperience.map((item) => {
           const dates = `${item.start} - ${item.end}`;
+          const skills = item.tags?.slice(0, 5) ?? [];
 
           return (
-            <div class:list={["experience-item", `experience-item--${side}`]} style={`--marker-x: ${markerX}%;`}>
-              <div class="experience-marker" aria-hidden="true">
-                <span>{item.end === "Present" ? "Now" : item.end.split(" ").at(-1)}</span>
+            <div class="experience-item">
+              <div class="experience-date" aria-label={dates}>
+                <span>{item.start}</span>
+                <strong>{item.end}</strong>
               </div>
+
+              <span class="experience-marker" aria-hidden="true"></span>
 
               <details class="experience-card">
                 <summary>
-                  <div class="experience-card__meta">
-                    <span>{dates}</span>
-                    {item.location && <span>{item.location}</span>}
+                  <div class="experience-card__top">
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p class="experience-card__org">{item.organization}</p>
+                    </div>
+                    <span class="experience-card__period">{dates}</span>
                   </div>
 
-                  <h3>{item.title}</h3>
-                  <p class="experience-card__org">{item.organization}</p>
+                  {item.location && <p class="experience-card__location">{item.location}</p>}
                   <p class="experience-card__summary">{item.summary}</p>
 
-                  <span class="experience-card__toggle">Details</span>
+                  {
+                    skills.length > 0 && (
+                      <ul class="experience-skills" aria-label={`Key skills for ${item.title}`}>
+                        {skills.map((skill) => <li>{skill}</li>)}
+                      </ul>
+                    )
+                  }
+
+                  <span class="experience-card__toggle">View details</span>
                 </summary>
 
                 <div class="experience-card__details">
