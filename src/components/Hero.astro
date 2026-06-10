@@ -2,13 +2,15 @@
 import NewsRail from "./NewsRail.astro";
 import { profile } from "../data/profile";
 
+const emailAddress = profile.links.email.replace("mailto:", "");
+
 const quickLinks = [
-  { label: "Resume", href: profile.links.resume },
-  { label: "CV", href: profile.links.cv },
-  { label: "Email", href: profile.links.email },
-  { label: "LinkedIn", href: profile.links.linkedin },
-  { label: "Scholar", href: profile.links.scholar },
-  { label: "GitHub", href: profile.links.github },
+  { label: "Resume", href: profile.links.resume, icon: "PDF", tone: "document", width: "half" },
+  { label: "CV", href: profile.links.cv, icon: "CV", tone: "document", width: "half" },
+  { label: emailAddress, href: profile.links.email, icon: "@", tone: "email", width: "full" },
+  { label: "LinkedIn", href: profile.links.linkedin, icon: "in", tone: "linkedin", width: "third" },
+  { label: "Scholar", href: profile.links.scholar, icon: "G", tone: "scholar", width: "third" },
+  { label: "GitHub", href: profile.links.github, icon: "GH", tone: "github", width: "third" },
 ];
 ---
 
@@ -23,23 +25,6 @@ const quickLinks = [
         <span class="hero__status-dot" aria-hidden="true"></span>
         <span>{profile.availability}</span>
       </div>
-
-      <div class="hero__actions" aria-label="Primary links">
-        <a class="button button--primary" href={profile.links.resume} target="_blank" rel="noreferrer">
-          Resume
-        </a>
-        <a class="button button--secondary" href={profile.links.cv} target="_blank" rel="noreferrer">
-          CV
-        </a>
-        <a class="button button--secondary" href="#experience">Experience</a>
-      </div>
-
-      <div class="hero__meta" aria-label="Contact and location">
-        <span>{profile.location}</span>
-        <a href={profile.links.email}>Email</a>
-        <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href={profile.links.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
-      </div>
     </div>
 
     <div class="hero__card">
@@ -47,17 +32,25 @@ const quickLinks = [
         <div class="portrait-card__image">
           <img src={profile.photo} alt={`Portrait of ${profile.name}`} loading="eager" />
         </div>
-        <div class="portrait-card__body">
-          <p class="portrait-card__name">{profile.name}</p>
-          <p class="portrait-card__detail">{profile.role} at {profile.affiliation}</p>
-        </div>
       </div>
 
       <div class="quick-links" aria-label="Profile links">
         {
           quickLinks.map((item) => (
-            <a class="quick-link" href={item.href} target={item.href.startsWith("mailto:") ? undefined : "_blank"} rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}>
-              {item.label}
+            <a
+              class:list={[
+                "quick-link",
+                `quick-link--${item.width}`,
+                `quick-link--${item.tone}`,
+              ]}
+              href={item.href}
+              target={item.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
+            >
+              <span class:list={["quick-link__icon", `quick-link__icon--${item.tone}`]} aria-hidden="true">
+                {item.icon}
+              </span>
+              <span class="quick-link__label">{item.label}</span>
             </a>
           ))
         }

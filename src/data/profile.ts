@@ -24,5 +24,4 @@ export const navigation = [
   { label: "Publications", href: "#publications" },
   { label: "Projects", href: "#projects" },
   { label: "Talks", href: "#talks" },
-  { label: "Resume", href: profile.links.resume, external: true },
 ];
