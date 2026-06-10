@@ -2,6 +2,7 @@
 import { news } from "../data/news";
 
 const latestNews = news.slice(0, 3);
+const olderNews = news.slice(3);
 ---
 
 <aside class="news-rail" aria-labelledby="latest-news-title">
@@ -29,4 +30,70 @@ const latestNews = news.slice(0, 3);
       ))
     }
   </ul>
+
+  {
+    olderNews.length > 0 && (
+      <div class="news-rail__footer">
+        <button class="news-rail__button" type="button" data-news-open>
+          View older updates
+        </button>
+      </div>
+    )
+  }
+
+  <dialog class="news-dialog" data-news-dialog aria-labelledby="news-dialog-title">
+    <div class="news-dialog__top">
+      <div>
+        <p class="news-dialog__eyebrow">News archive</p>
+        <h2 class="news-dialog__title" id="news-dialog-title">All Updates</h2>
+      </div>
+      <button class="news-dialog__close" type="button" data-news-close aria-label="Close news archive">
+        Close
+      </button>
+    </div>
+
+    <ul class="news-dialog__list">
+      {
+        news.map((item) => (
+          <li class="news-dialog__item">
+            <span class="news-item__date">{item.date}</span>
+            {
+              item.href ? (
+                <a class="news-item__title" href={item.href} target="_blank" rel="noreferrer">
+                  {item.title}
+                </a>
+              ) : (
+                <span class="news-item__title">{item.title}</span>
+              )
+            }
+            <p class="news-item__description">{item.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </dialog>
 </aside>
+
+<script>
+  const newsOpenButton = document.querySelector("[data-news-open]");
+  const newsDialog = document.querySelector("[data-news-dialog]");
+  const newsCloseButton = document.querySelector("[data-news-close]");
+
+  newsOpenButton?.addEventListener("click", () => {
+    if (newsDialog instanceof HTMLDialogElement) {
+      newsDialog.showModal();
+    }
+  });
+
+  newsCloseButton?.addEventListener("click", () => {
+    if (newsDialog instanceof HTMLDialogElement) {
+      newsDialog.close();
+    }
+  });
+
+  newsDialog?.addEventListener("click", (event) => {
+    if (event.target === newsDialog && newsDialog instanceof HTMLDialogElement) {
+      newsDialog.close();
+    }
+  });
+</script>

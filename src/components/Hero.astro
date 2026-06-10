@@ -1,24 +1,24 @@
 ---
+import BrandIcon from "./BrandIcon.astro";
 import NewsRail from "./NewsRail.astro";
 import { profile } from "../data/profile";
 
 const emailAddress = profile.links.email.replace("mailto:", "");
 
 const quickLinks = [
-  { label: "Resume", href: profile.links.resume, icon: "PDF", tone: "document", width: "half" },
-  { label: "CV", href: profile.links.cv, icon: "CV", tone: "document", width: "half" },
-  { label: emailAddress, href: profile.links.email, icon: "@", tone: "email", width: "full" },
-  { label: "LinkedIn", href: profile.links.linkedin, icon: "in", tone: "linkedin", width: "third" },
-  { label: "Scholar", href: profile.links.scholar, icon: "G", tone: "scholar", width: "third" },
-  { label: "GitHub", href: profile.links.github, icon: "GH", tone: "github", width: "third" },
+  { label: "Resume", href: profile.links.resume, icon: "external", tone: "document", width: "half" },
+  { label: "CV", href: profile.links.cv, icon: "external", tone: "document", width: "half" },
+  { label: emailAddress, href: profile.links.email, icon: "email", tone: "email", width: "full" },
+  { label: "LinkedIn", href: profile.links.linkedin, icon: "linkedin", tone: "linkedin", width: "third" },
+  { label: "Scholar", href: profile.links.scholar, icon: "scholar", tone: "scholar", width: "third" },
+  { label: "GitHub", href: profile.links.github, icon: "github", tone: "github", width: "third" },
 ];
 ---
 
 <section class="hero container" aria-labelledby="hero-title">
   <div class="hero__grid">
     <div>
-      <p class="eyebrow">{profile.affiliation}</p>
-      <h1 id="hero-title">{profile.name}</h1>
+      <h1 id="hero-title">Hi, I'm Rushendra!!</h1>
       <p class="hero__lead">{profile.summary}</p>
 
       <div class="hero__status">
@@ -48,7 +48,7 @@ const quickLinks = [
               rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
             >
               <span class:list={["quick-link__icon", `quick-link__icon--${item.tone}`]} aria-hidden="true">
-                {item.icon}
+                <BrandIcon name={item.icon} />
               </span>
               <span class="quick-link__label">{item.label}</span>
             </a>

@@ -1,13 +1,12 @@
 export const profile = {
   name: "Rushendra Sidibomma",
-  role: "MS Computer Science Student",
+  role: "Machine Learning Researcher & Engineer",
   affiliation: "University of Minnesota Twin Cities",
   location: "Minneapolis, MN",
   photo: "/images/umn_profile_picture.png",
   summary:
     "Machine learning researcher and engineer focused on trustworthy ML, generative AI, computer vision, NLP, and data-driven healthcare applications.",
-  availability:
-    "Open to machine learning engineering, data science, backend engineering, and applied AI roles.",
+  availability: "Open to ML, applied AI, and backend roles.",
   links: {
     email: "mailto:sidibomma.rushendra@gmail.com",
     github: "https://github.com/Rushendra10",
