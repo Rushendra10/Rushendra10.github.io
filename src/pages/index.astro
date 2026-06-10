@@ -1,4 +1,5 @@
 ---
+import ExperienceSection from "../components/ExperienceSection.astro";
 import Hero from "../components/Hero.astro";
 import SectionShell from "../components/SectionShell.astro";
 import SkillsSection from "../components/SkillsSection.astro";
@@ -11,13 +12,7 @@ import { profile } from "../data/profile";
 
   <SkillsSection />
 
-  <SectionShell
-    id="experience"
-    kicker="Experience"
-    title="Internships, research, and fellowships"
-    intro="Experience will be separated from education and presented as an expandable timeline so a recruiter can skim roles first, then open details when needed."
-    placeholder="Next pass: create expandable role cards from src/data/experience.ts and a separate education band from src/data/education.ts."
-  />
+  <ExperienceSection />
 
   <SectionShell
     id="publications"

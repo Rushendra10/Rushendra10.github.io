@@ -1,0 +1,95 @@
+---
+import { experience } from "../data/experience";
+
+const categoryClass = {
+  Industry: "industry",
+  Research: "research",
+  Fellowship: "fellowship",
+};
+
+const monthOrder: Record<string, number> = {
+  January: 1,
+  February: 2,
+  March: 3,
+  April: 4,
+  May: 5,
+  June: 6,
+  July: 7,
+  August: 8,
+  September: 9,
+  October: 10,
+  November: 11,
+  December: 12,
+};
+
+function getSortValue(date: string) {
+  if (date === "Present") {
+    return Number.MAX_SAFE_INTEGER;
+  }
+
+  const [month, year] = date.split(" ");
+  return Number(year) * 12 + (monthOrder[month] ?? 0);
+}
+
+const orderedExperience = [...experience].sort(
+  (a, b) => getSortValue(b.end) - getSortValue(a.end),
+);
+---
+
+<section class="section experience-section" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    <div class="experience-heading">
+      <h2 id="experience-title">Experience</h2>
+      <span aria-hidden="true"></span>
+    </div>
+
+    <div class="experience-path" aria-label="Experience timeline">
+      <svg class="experience-rail" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M52 0 C 38 18 62 31 49 50 S 38 82 53 100"></path>
+      </svg>
+
+      {
+        orderedExperience.map((item, index) => {
+          const side = index % 2 === 0 ? "left" : "right";
+          const dates = `${item.start} - ${item.end}`;
+
+          return (
+            <div class:list={["experience-item", `experience-item--${side}`]}>
+              <div class="experience-marker" aria-hidden="true">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+
+              <details class:list={["experience-card", `experience-card--${categoryClass[item.category]}`]}>
+                <summary>
+                  <div class="experience-card__meta">
+                    <span class="experience-card__category">{item.category}</span>
+                    <span>{dates}</span>
+                  </div>
+
+                  <h3>{item.title}</h3>
+                  <p class="experience-card__org">{item.organization}</p>
+                  {item.location && <p class="experience-card__location">{item.location}</p>}
+                  <p class="experience-card__summary">{item.summary}</p>
+
+                  {item.tags && (
+                    <ul class="experience-tags" aria-label={`${item.title} skill tags`}>
+                      {item.tags.map((tag) => <li>{tag}</li>)}
+                    </ul>
+                  )}
+
+                  <span class="experience-card__toggle">Details</span>
+                </summary>
+
+                <div class="experience-card__details">
+                  <ul>
+                    {item.details.map((detail) => <li>{detail}</li>)}
+                  </ul>
+                </div>
+              </details>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
