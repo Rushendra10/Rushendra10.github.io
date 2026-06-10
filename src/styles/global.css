@@ -666,6 +666,10 @@ main {
     radial-gradient(circle at 14% 10%, rgba(15, 95, 92, 0.035), transparent 24rem);
 }
 
+.skills-section .container {
+  width: min(100% - 24px, 1380px);
+}
+
 .skills-heading {
   display: grid;
   grid-template-columns: auto minmax(40px, 1fr);
@@ -689,7 +693,7 @@ main {
 
 .skills-pattern {
   display: grid;
-  max-width: 990px;
+  max-width: 1180px;
   margin: 32px auto 0;
 }
 
@@ -751,19 +755,28 @@ main {
   font-size: 0.98rem;
   line-height: 1.22;
   font-weight: 850;
+  white-space: nowrap;
 }
 
 .skill-chip-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 7px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
   margin: 0;
-  padding: 0;
+  padding: 0 0 3px;
   list-style: none;
+  scrollbar-width: none;
+}
+
+.skill-chip-list::-webkit-scrollbar {
+  display: none;
 }
 
 .skill-chip {
   display: inline-flex;
+  flex: 0 0 auto;
   min-height: 31px;
   align-items: center;
   gap: 6px;
