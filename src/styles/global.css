@@ -838,6 +838,120 @@ main {
   color: var(--accent-strong);
 }
 
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1120px;
+  margin: 34px auto 0;
+}
+
+.research-card {
+  position: relative;
+  display: grid;
+  min-height: 360px;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(221, 216, 206, 0.88);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 253, 248, 0.86)),
+    var(--surface);
+  padding: 20px;
+  box-shadow: 0 14px 36px rgba(35, 38, 35, 0.055);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.research-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(15, 95, 92, 0.78), rgba(185, 137, 61, 0.56));
+}
+
+.research-card:nth-child(2)::before {
+  background: linear-gradient(90deg, rgba(52, 91, 157, 0.72), rgba(15, 95, 92, 0.58));
+}
+
+.research-card:nth-child(3)::before {
+  background: linear-gradient(90deg, rgba(138, 75, 56, 0.7), rgba(185, 137, 61, 0.62));
+}
+
+.research-card:hover {
+  border-color: rgba(15, 95, 92, 0.24);
+  box-shadow: 0 20px 48px rgba(35, 38, 35, 0.085);
+  transform: translateY(-2px);
+}
+
+.research-card__top {
+  display: grid;
+  gap: 10px;
+}
+
+.research-card__year {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  border: 1px solid rgba(15, 95, 92, 0.18);
+  border-radius: 999px;
+  background: rgba(15, 95, 92, 0.06);
+  padding: 5px 9px;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.research-card__venue,
+.research-card__body p,
+.research-card__authors {
+  margin: 0;
+}
+
+.research-card__venue {
+  color: var(--warm);
+  font-size: 0.8rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.research-card__body {
+  display: grid;
+  gap: 10px;
+}
+
+.research-card__body h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.7vw, 1.32rem);
+  line-height: 1.18;
+  font-weight: 850;
+}
+
+.research-card__body p {
+  color: var(--muted);
+  font-size: 0.91rem;
+  line-height: 1.52;
+}
+
+.research-card__authors {
+  align-self: end;
+  color: var(--faint);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.research-card__links {
+  align-self: end;
+  margin-top: 2px;
+}
+
 .skills-section {
   background:
     linear-gradient(180deg, rgba(255, 253, 248, 0.28), rgba(255, 255, 255, 0)),
@@ -1327,6 +1441,16 @@ main {
     font-size: 0.78rem;
   }
 
+  .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    margin-top: 28px;
+  }
+
+  .research-card {
+    min-height: 330px;
+  }
+
   .skills-pattern {
     max-width: none;
     margin-top: 28px;
@@ -1425,6 +1549,18 @@ main {
 
   .compact-links a {
     min-height: 29px;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .research-card {
+    min-height: auto;
+    gap: 15px;
+    padding: 18px;
   }
 
   .skills-pattern {

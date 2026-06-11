@@ -9,30 +9,33 @@ import { publications } from "../data/publications";
       <span aria-hidden="true"></span>
     </div>
 
-    <div class="compact-list">
+    <div class="research-grid">
       {
         publications.map((publication) => (
-          <article class="compact-row">
-            <div class="compact-row__date">{publication.year}</div>
-
-            <div class="compact-row__body">
-              <h3>{publication.title}</h3>
-              <p class="compact-meta">{publication.venue}</p>
-              <p class="compact-summary">{publication.summary}</p>
-              <p class="compact-authors">{publication.authors}</p>
-
-              <ul class="compact-links" aria-label={`${publication.title} links`}>
-                {
-                  publication.links.map((link) => (
-                    <li>
-                      <a href={link.href} target="_blank" rel="noreferrer">
-                        {link.label}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
+          <article class="research-card">
+            <div class="research-card__top">
+              <span class="research-card__year">{publication.year}</span>
+              <p class="research-card__venue">{publication.venue}</p>
             </div>
+
+            <div class="research-card__body">
+              <h3>{publication.title}</h3>
+              <p>{publication.summary}</p>
+            </div>
+
+            <p class="research-card__authors">{publication.authors}</p>
+
+            <ul class="compact-links research-card__links" aria-label={`${publication.title} links`}>
+              {
+                publication.links.map((link) => (
+                  <li>
+                    <a href={link.href} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
           </article>
         ))
       }
