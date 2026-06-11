@@ -13,7 +13,8 @@ export const education: EducationItem[] = [
     degree: "MS Computer Science",
     institution: "University of Minnesota Twin Cities",
     location: "Minneapolis, MN",
-    end: "May 2027 (Expected)",
+    start: "2025",
+    end: "Present (Expected May 2027)",
     gpa: "3.94/4.0",
     coursework: [
       "Computer Vision",

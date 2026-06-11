@@ -14,6 +14,11 @@ const quickLinks = [
   { label: "Scholar", href: profile.links.scholar, icon: "scholar", tone: "scholar", width: "third" },
   { label: "GitHub", href: profile.links.github, icon: "github", tone: "github", width: "third" },
 ];
+
+const heroEducation = education.slice(0, 2);
+
+const formatEducationPeriod = (item: (typeof education)[number]) =>
+  item.start ? `${item.start} - ${item.end}` : item.end;
 ---
 
 <section class="hero container" aria-labelledby="hero-title">
@@ -61,11 +66,15 @@ const quickLinks = [
       </div>
 
       <div class="credential-card" aria-label="Education">
+        <div class="credential-card__header">
+          <span>Education</span>
+        </div>
         {
-          education.slice(0, 2).map((item) => (
+          heroEducation.map((item) => (
             <div class="credential-card__item">
               <p class="credential-card__degree">{item.degree}</p>
               <p class="credential-card__institution">{item.institution}</p>
+              <p class="credential-card__period">{formatEducationPeriod(item)}</p>
             </div>
           ))
         }
