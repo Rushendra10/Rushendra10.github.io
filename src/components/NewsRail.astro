@@ -44,9 +44,15 @@ import { news } from "../data/news";
   const newsDialog = document.querySelector("[data-news-dialog]");
 
   document.addEventListener("click", (event) => {
-    const target = event.target;
+    const eventTarget = event.target;
+    const target =
+      eventTarget instanceof Element
+        ? eventTarget
+        : eventTarget instanceof Node
+          ? eventTarget.parentElement
+          : null;
 
-    if (!(target instanceof Element) || !(newsDialog instanceof HTMLDialogElement)) {
+    if (!target || !(newsDialog instanceof HTMLDialogElement)) {
       return;
     }
 
@@ -58,6 +64,12 @@ import { news } from "../data/news";
     }
 
     if (target.closest("[data-news-close]") || target === newsDialog) {
+      newsDialog.close();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && newsDialog instanceof HTMLDialogElement && newsDialog.open) {
       newsDialog.close();
     }
   });

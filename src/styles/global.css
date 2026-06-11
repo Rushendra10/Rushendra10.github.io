@@ -527,6 +527,7 @@ main {
   width: min(92vw, 620px);
   max-height: min(78vh, 680px);
   overflow: auto;
+  pointer-events: auto;
   border: 1px solid rgba(199, 192, 181, 0.86);
   border-radius: 16px;
   background: var(--surface-strong);
