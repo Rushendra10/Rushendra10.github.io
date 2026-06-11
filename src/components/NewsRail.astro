@@ -1,29 +1,11 @@
 ---
 import { news } from "../data/news";
-
-const latestNews = news.slice(0, 3);
-
-function getShortDate(date: string) {
-  const [month, year] = date.split(" ");
-  return `${month.slice(0, 3)} '${year.slice(-2)}`;
-}
 ---
 
 <aside class="news-float" aria-labelledby="latest-news-title">
-  <button class="news-float__label" type="button" data-news-open>
+  <button class="news-float__label" type="button" data-news-open aria-label="Open news archive">
     <span id="latest-news-title">News</span>
   </button>
-
-  <div class="news-float__items" aria-label="Latest updates">
-    {
-      latestNews.map((item) => (
-        <button class="news-float__item" type="button" data-news-open>
-          <span>{getShortDate(item.date)}</span>
-          <strong>{item.title}</strong>
-        </button>
-      ))
-    }
-  </div>
 
   <dialog class="news-dialog" data-news-dialog aria-labelledby="news-dialog-title">
     <div class="news-dialog__top">
@@ -59,26 +41,23 @@ function getShortDate(date: string) {
 </aside>
 
 <script>
-  const newsOpenButtons = document.querySelectorAll("[data-news-open]");
   const newsDialog = document.querySelector("[data-news-dialog]");
-  const newsCloseButton = document.querySelector("[data-news-close]");
 
-  newsOpenButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (newsDialog instanceof HTMLDialogElement) {
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (!(target instanceof Element) || !(newsDialog instanceof HTMLDialogElement)) {
+      return;
+    }
+
+    if (target.closest("[data-news-open]")) {
+      if (!newsDialog.open) {
         newsDialog.showModal();
       }
-    });
-  });
-
-  newsCloseButton?.addEventListener("click", () => {
-    if (newsDialog instanceof HTMLDialogElement) {
-      newsDialog.close();
+      return;
     }
-  });
 
-  newsDialog?.addEventListener("click", (event) => {
-    if (event.target === newsDialog && newsDialog instanceof HTMLDialogElement) {
+    if (target.closest("[data-news-close]") || target === newsDialog) {
       newsDialog.close();
     }
   });
