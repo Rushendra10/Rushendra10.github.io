@@ -46,8 +46,9 @@ const orderedExperience = [...experience].sort(
           return (
             <div class="experience-item">
               <div class="experience-date" aria-label={dates}>
-                <span>{item.start}</span>
-                <strong>{item.end}</strong>
+                <strong class="experience-date__end">{item.end}</strong>
+                <span class="experience-date__line" aria-hidden="true"></span>
+                <span class="experience-date__start">{item.start}</span>
               </div>
 
               <span class="experience-marker" aria-hidden="true"></span>

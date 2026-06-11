@@ -1239,14 +1239,14 @@ main {
 
 .experience-date {
   display: grid;
-  gap: 2px;
-  padding-top: 21px;
+  gap: 4px;
+  padding-top: 16px;
   padding-right: 20px;
   text-align: right;
 }
 
-.experience-date span,
-.experience-date strong {
+.experience-date__start,
+.experience-date__end {
   display: block;
   color: var(--faint);
   font-size: 0.78rem;
@@ -1255,8 +1255,17 @@ main {
   line-height: 1.25;
 }
 
-.experience-date strong {
+.experience-date__end {
   color: var(--accent-strong);
+}
+
+.experience-date__line {
+  display: block;
+  width: 1px;
+  height: 15px;
+  justify-self: end;
+  margin-right: 2px;
+  background: linear-gradient(180deg, rgba(15, 95, 92, 0.42), rgba(15, 95, 92, 0.12));
 }
 
 .experience-marker {
