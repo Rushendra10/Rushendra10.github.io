@@ -532,10 +532,10 @@ main {
   content: "";
   position: absolute;
   top: -11px;
-  left: 22%;
-  right: 22%;
+  left: 0;
+  right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(15, 95, 92, 0.22), transparent);
+  background: var(--line-strong);
 }
 
 .credential-card__header {
@@ -2143,7 +2143,7 @@ main {
 }
 
 :root[data-theme="dark"] .credential-card::before {
-  background: linear-gradient(90deg, transparent, rgba(98, 200, 188, 0.24), transparent);
+  background: var(--line-strong);
 }
 
 :root[data-theme="dark"] .news-dialog {
