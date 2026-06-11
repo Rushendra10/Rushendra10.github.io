@@ -23,7 +23,7 @@ export const education: EducationItem[] = [
     ],
   },
   {
-    degree: "BS Computer Science",
+    degree: "BS Computer Science with Honors",
     institution: "IIIT Sri City",
     location: "Andhra Pradesh, India",
     start: "2020",

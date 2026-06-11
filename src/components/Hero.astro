@@ -1,6 +1,7 @@
 ---
 import BrandIcon from "./BrandIcon.astro";
 import NewsRail from "./NewsRail.astro";
+import { education } from "../data/education";
 import { profile } from "../data/profile";
 
 const emailAddress = profile.links.email.replace("mailto:", "");
@@ -55,6 +56,17 @@ const quickLinks = [
               </span>
               <span class="quick-link__label">{item.label}</span>
             </a>
+          ))
+        }
+      </div>
+
+      <div class="credential-card" aria-label="Education">
+        {
+          education.slice(0, 2).map((item) => (
+            <div class="credential-card__item">
+              <p class="credential-card__degree">{item.degree}</p>
+              <p class="credential-card__institution">{item.institution}</p>
+            </div>
           ))
         }
       </div>
