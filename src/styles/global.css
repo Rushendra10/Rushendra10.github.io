@@ -515,8 +515,10 @@ main {
 }
 
 .credential-card {
+  position: relative;
   display: grid;
   width: 100%;
+  margin-top: 6px;
   border: 1px solid rgba(221, 216, 206, 0.88);
   border-radius: var(--radius);
   background:
@@ -524,6 +526,16 @@ main {
     var(--surface);
   padding: 8px 14px 5px;
   box-shadow: 0 12px 30px rgba(35, 38, 35, 0.045);
+}
+
+.credential-card::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 22%;
+  right: 22%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15, 95, 92, 0.22), transparent);
 }
 
 .credential-card__header {
@@ -2128,6 +2140,10 @@ main {
 :root[data-theme="dark"] .portrait-card__image,
 :root[data-theme="dark"] .presentation-card__media {
   background: #222a26;
+}
+
+:root[data-theme="dark"] .credential-card::before {
+  background: linear-gradient(90deg, transparent, rgba(98, 200, 188, 0.24), transparent);
 }
 
 :root[data-theme="dark"] .news-dialog {
