@@ -12,38 +12,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Applied AI Project",
+    title: "Applied AI Systems",
     status: "Placeholder",
     summary:
-      "Placeholder for a selected AI/ML project. Replace this with the problem, method, stack, and outcome.",
+      "A slot for selected applied AI work covering problem framing, model or agent design, evaluation, and measurable outcome.",
     highlights: [
-      "Describe the user or research problem.",
-      "Mention the model, system design, or evaluation approach.",
-      "Add a measurable result or impact when available.",
+      "Problem context and target user or workflow.",
+      "Model, retrieval, agent, or evaluation approach.",
+      "Measured result, demo, repository, or write-up.",
     ],
     tags: ["Machine Learning", "Python", "Research"],
   },
   {
-    title: "Backend / Data System",
+    title: "Backend & Data Systems",
     status: "Placeholder",
     summary:
-      "Placeholder for an engineering project showing backend, data, or deployment depth.",
+      "A slot for engineering work that shows API design, data storage, automation, deployment, and reliability.",
     highlights: [
-      "Describe the system architecture.",
-      "Mention API, database, cloud, or automation work.",
-      "Add a demo, repository, or write-up link later.",
+      "System architecture and core data flow.",
+      "API, database, cloud, or automation decisions.",
+      "Performance, reliability, demo, or repository link.",
     ],
     tags: ["Backend", "Data", "APIs"],
   },
   {
-    title: "Research Prototype",
+    title: "Research Prototypes",
     status: "Placeholder",
     summary:
-      "Placeholder for a research-oriented prototype connected to robustness, NLP, or computer vision.",
+      "A slot for experimental prototypes in robustness, NLP, or computer vision with clear baselines and evaluation.",
     highlights: [
-      "Describe the hypothesis or research objective.",
-      "Mention experiments, datasets, and baselines.",
-      "Add links to code, paper, or slides when ready.",
+      "Research objective or hypothesis.",
+      "Datasets, experiments, and baselines.",
+      "Code, paper, slides, or reproducibility notes.",
     ],
     tags: ["Robust ML", "Experimentation", "Evaluation"],
   },

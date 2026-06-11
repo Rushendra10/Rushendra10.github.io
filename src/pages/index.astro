@@ -1,7 +1,9 @@
 ---
 import ExperienceSection from "../components/ExperienceSection.astro";
 import Hero from "../components/Hero.astro";
-import SectionShell from "../components/SectionShell.astro";
+import PresentationsSection from "../components/PresentationsSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import ResearchOutputsSection from "../components/ResearchOutputsSection.astro";
 import SkillsSection from "../components/SkillsSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { profile } from "../data/profile";
@@ -14,27 +16,9 @@ import { profile } from "../data/profile";
 
   <ExperienceSection />
 
-  <SectionShell
-    id="projects"
-    kicker="Projects"
-    title="Selected technical work"
-    intro="Project cards will stay modular so we can replace placeholders with stronger job-search-focused case studies as you choose what to feature."
-    placeholder="Next pass: add project templates from src/data/projects.ts with outcomes, stack, and links."
-  />
+  <ProjectsSection />
 
-  <SectionShell
-    id="publications"
-    kicker="Publications"
-    title="Research outputs"
-    intro="Publications will emphasize venue, year, contribution area, and quick links to paper pages or PDFs without making the page feel dense."
-    placeholder="Next pass: render src/data/publications.ts as clean publication rows with links, tags, and compact abstracts."
-  />
+  <ResearchOutputsSection />
 
-  <SectionShell
-    id="talks"
-    kicker="Talks"
-    title="Presentations and teaching"
-    intro="Talks will remain distinct from publications so invited talks, seminars, and presentations have their own clean place."
-    placeholder="Next pass: render src/data/talks.ts as compact talk entries with event, location, and links where available."
-  />
+  <PresentationsSection />
 </BaseLayout>
