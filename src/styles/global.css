@@ -305,19 +305,6 @@ main {
   gap: 14px;
 }
 
-.portrait-stage {
-  display: grid;
-  width: 100%;
-  justify-items: center;
-  border: 1px solid rgba(221, 216, 206, 0.82);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 253, 248, 0.7)),
-    var(--surface);
-  padding: 18px 0;
-  box-shadow: 0 14px 34px rgba(35, 38, 35, 0.05);
-}
-
 .portrait-card {
   overflow: hidden;
   width: 180px;
