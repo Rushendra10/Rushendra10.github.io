@@ -1032,6 +1032,93 @@ main {
   color: var(--faint);
 }
 
+.presentation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1180px;
+  margin: 34px auto 0;
+}
+
+.presentation-card {
+  overflow: hidden;
+  border: 1px solid rgba(221, 216, 206, 0.88);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 253, 248, 0.84)),
+    var(--surface);
+  box-shadow: 0 14px 34px rgba(35, 38, 35, 0.052);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.presentation-card:hover,
+.presentation-card:focus-within {
+  border-color: rgba(15, 95, 92, 0.24);
+  box-shadow: 0 18px 44px rgba(35, 38, 35, 0.08);
+  transform: translateY(-2px);
+}
+
+.presentation-card__media {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(221, 216, 206, 0.78);
+  background: #ede7dc;
+}
+
+.presentation-card__media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.presentation-card__body {
+  display: grid;
+  gap: 9px;
+  padding: 18px 20px 21px;
+}
+
+.presentation-card__date {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  border: 1px solid rgba(15, 95, 92, 0.18);
+  border-radius: 999px;
+  background: rgba(15, 95, 92, 0.06);
+  padding: 5px 9px;
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.presentation-card__body h3,
+.presentation-card__meta,
+.presentation-card__summary {
+  margin: 0;
+}
+
+.presentation-card__body h3 {
+  color: var(--ink);
+  font-size: clamp(1.06rem, 1.6vw, 1.26rem);
+  line-height: 1.2;
+  font-weight: 850;
+}
+
+.presentation-card__meta {
+  color: var(--warm);
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.presentation-card__summary {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.52;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1651,6 +1738,12 @@ main {
     min-height: 290px;
   }
 
+  .presentation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    margin-top: 28px;
+  }
+
   .research-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: none;
@@ -1781,6 +1874,16 @@ main {
 
   .project-card__footer {
     padding: 11px 14px;
+  }
+
+  .presentation-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .presentation-card__body {
+    padding: 17px 18px 19px;
   }
 
   .research-grid {

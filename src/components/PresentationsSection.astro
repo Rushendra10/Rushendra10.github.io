@@ -9,18 +9,21 @@ import { talks } from "../data/talks";
       <span aria-hidden="true"></span>
     </div>
 
-    <div class="compact-list">
+    <div class="presentation-grid">
       {
         talks.map((talk) => (
-          <article class="compact-row">
-            <div class="compact-row__date">{talk.date}</div>
+          <article class="presentation-card">
+            <div class="presentation-card__media">
+              <img src={talk.image} alt={talk.imageAlt} loading="lazy" />
+            </div>
 
-            <div class="compact-row__body">
+            <div class="presentation-card__body">
+              <span class="presentation-card__date">{talk.date}</span>
               <h3>{talk.title}</h3>
-              <p class="compact-meta">
+              <p class="presentation-card__meta">
                 {talk.venue} · {talk.location}
               </p>
-              <p class="compact-summary">{talk.summary}</p>
+              <p class="presentation-card__summary">{talk.summary}</p>
             </div>
           </article>
         ))
