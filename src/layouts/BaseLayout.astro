@@ -23,6 +23,22 @@ const currentYear = new Date().getFullYear();
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      (() => {
+        const storageKey = "rushendra-theme";
+
+        try {
+          const storedTheme = localStorage.getItem(storageKey);
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = storedTheme || (prefersDark ? "dark" : "light");
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
