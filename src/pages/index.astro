@@ -9,7 +9,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { profile } from "../data/profile";
 ---
 
-<BaseLayout title="Rushendra" description={profile.summary}>
+<BaseLayout
+  title="Rushendra"
+  seoTitle={`${profile.name} | Applied AI and Machine Learning`}
+  description={profile.summary}
+>
   <Hero />
 
   <SkillsSection />
