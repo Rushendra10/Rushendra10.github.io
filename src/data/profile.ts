@@ -3,7 +3,7 @@ export const profile = {
   role: "Machine Learning Researcher & Engineer",
   affiliation: "University of Minnesota Twin Cities",
   location: "Minneapolis, MN",
-  photo: "/images/umn_profile_picture.png",
+  photo: "/images/Rushendra.jpg",
   summary:
     "I build applied AI systems that turn messy, unstructured information into dependable products and workflows.",
   bio: [
