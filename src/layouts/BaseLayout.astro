@@ -1,0 +1,60 @@
+---
+import TopNav from "../components/TopNav.astro";
+import { profile } from "../data/profile";
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = `${profile.name} | Portfolio`,
+  description = profile.summary,
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      (() => {
+        const storageKey = "rushendra-theme";
+
+        try {
+          const storedTheme = localStorage.getItem(storageKey);
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = storedTheme || (prefersDark ? "dark" : "light");
+
+          document.documentElement.dataset.theme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <TopNav />
+      <main id="main">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div class="container">
+          <span>&copy; {currentYear} {profile.name}</span>
+          <a href={profile.links.email}>sidibomma.rushendra@gmail.com</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
