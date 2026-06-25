@@ -1523,8 +1523,8 @@ main {
   position: relative;
   display: grid;
   gap: 12px;
-  max-width: 1000px;
-  margin: 34px auto 0 0;
+  max-width: 980px;
+  margin: 34px auto 0 80px;
 }
 
 .experience-path::before {
@@ -1613,7 +1613,7 @@ main {
   gap: 10px;
   cursor: pointer;
   list-style: none;
-  padding: 20px 22px;
+  padding: 20px 15px 20px 22px;
 }
 
 .experience-card summary::-webkit-details-marker {
