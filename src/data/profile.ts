@@ -27,5 +27,5 @@ export const navigation = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Research", href: "#publications" },
-  { label: "Presentations", href: "#talks" },
+  { label: "Talks", href: "#talks" },
 ];

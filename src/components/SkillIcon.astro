@@ -1,26 +1,28 @@
 ---
-import {
-  siDjango,
-  siDocker,
-  siFastapi,
-  siGit,
-  siGnubash,
-  siGo,
-  siHuggingface,
-  siJavascript,
-  siLangchain,
-  siLinux,
-  siMongodb,
-  siMysql,
-  siNodedotjs,
-  siNvidia,
-  siOpenjdk,
-  siPostgresql,
-  siPython,
-  siPytorch,
-  siRedis,
-  siScikitlearn,
-} from "simple-icons";
+import { siClaudecode } from "simple-icons";
+import awsLogo from "devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg?url";
+import azureLogo from "devicon/icons/azure/azure-original.svg?url";
+import bashLogo from "devicon/icons/bash/bash-original.svg?url";
+import cplusplusLogo from "devicon/icons/cplusplus/cplusplus-original.svg?url";
+import djangoLogo from "devicon/icons/django/django-plain.svg?url";
+import dockerLogo from "devicon/icons/docker/docker-original.svg?url";
+import elasticsearchLogo from "devicon/icons/elasticsearch/elasticsearch-original.svg?url";
+import fastapiLogo from "devicon/icons/fastapi/fastapi-original.svg?url";
+import gitLogo from "devicon/icons/git/git-original.svg?url";
+import goLogo from "devicon/icons/go/go-original.svg?url";
+import grafanaLogo from "devicon/icons/grafana/grafana-original.svg?url";
+import javaLogo from "devicon/icons/java/java-original.svg?url";
+import javascriptLogo from "devicon/icons/javascript/javascript-original.svg?url";
+import linuxLogo from "devicon/icons/linux/linux-original.svg?url";
+import mongodbLogo from "devicon/icons/mongodb/mongodb-original.svg?url";
+import mysqlLogo from "devicon/icons/mysql/mysql-original.svg?url";
+import nodejsLogo from "devicon/icons/nodejs/nodejs-original.svg?url";
+import postgresqlLogo from "devicon/icons/postgresql/postgresql-original.svg?url";
+import prometheusLogo from "devicon/icons/prometheus/prometheus-original.svg?url";
+import pythonLogo from "devicon/icons/python/python-original.svg?url";
+import pytorchLogo from "devicon/icons/pytorch/pytorch-original.svg?url";
+import redisLogo from "devicon/icons/redis/redis-original.svg?url";
+import scikitlearnLogo from "devicon/icons/scikitlearn/scikitlearn-original.svg?url";
 
 type Props = {
   icon?: string;
@@ -28,47 +30,61 @@ type Props = {
 
 const { icon } = Astro.props;
 
-const brandIcons = {
-  bash: siGnubash,
-  django: siDjango,
-  docker: siDocker,
-  fastapi: siFastapi,
-  git: siGit,
-  go: siGo,
-  huggingface: siHuggingface,
-  java: siOpenjdk,
-  javascript: siJavascript,
-  langchain: siLangchain,
-  linux: siLinux,
-  mongodb: siMongodb,
-  mysql: siMysql,
-  nodejs: siNodedotjs,
-  nvidia: siNvidia,
-  postgresql: siPostgresql,
-  python: siPython,
-  pytorch: siPytorch,
-  redis: siRedis,
-  scikitlearn: siScikitlearn,
+const deviconLogos = {
+  aws: { title: "AWS", src: awsLogo, wordmark: true },
+  azure: { title: "Azure", src: azureLogo },
+  bash: { title: "Bash", src: bashLogo },
+  cplusplus: { title: "C/C++", src: cplusplusLogo },
+  django: { title: "Django", src: djangoLogo },
+  docker: { title: "Docker", src: dockerLogo },
+  elasticsearch: { title: "Elasticsearch", src: elasticsearchLogo },
+  fastapi: { title: "FastAPI", src: fastapiLogo },
+  git: { title: "Git", src: gitLogo },
+  go: { title: "Go", src: goLogo, wordmark: true },
+  grafana: { title: "Grafana", src: grafanaLogo },
+  java: { title: "Java", src: javaLogo },
+  javascript: { title: "JavaScript", src: javascriptLogo },
+  linux: { title: "Linux", src: linuxLogo },
+  mongodb: { title: "MongoDB", src: mongodbLogo },
+  mysql: { title: "MySQL", src: mysqlLogo },
+  nodejs: { title: "Node.js", src: nodejsLogo },
+  postgresql: { title: "PostgreSQL", src: postgresqlLogo },
+  prometheus: { title: "Prometheus", src: prometheusLogo },
+  python: { title: "Python", src: pythonLogo },
+  pytorch: { title: "PyTorch", src: pytorchLogo },
+  redis: { title: "Redis", src: redisLogo },
+  scikitlearn: { title: "Scikit-Learn", src: scikitlearnLogo },
 } as const;
 
-const brandIcon = icon ? brandIcons[icon as keyof typeof brandIcons] : undefined;
+const simpleBrandIcons = {
+  claudecode: siClaudecode,
+} as const;
+
+const deviconLogo = icon ? deviconLogos[icon as keyof typeof deviconLogos] : undefined;
+const simpleBrandIcon = icon ? simpleBrandIcons[icon as keyof typeof simpleBrandIcons] : undefined;
 ---
 
-<span
-  class:list={["skill-chip__icon", brandIcon ? "skill-chip__icon--brand" : "skill-chip__icon--neutral"]}
-  style={brandIcon ? `--skill-logo-color: #${brandIcon.hex}` : undefined}
->
-  {
-    brandIcon ? (
-      <svg class="skill-logo" viewBox="0 0 24 24" aria-hidden="true">
-        <path d={brandIcon.path}></path>
-      </svg>
-    ) : (
-      <svg class="skill-logo skill-logo--neutral" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="5" y="5" width="14" height="14" rx="3"></rect>
-        <path d="M8.5 12h7"></path>
-        <path d="M12 8.5v7"></path>
-      </svg>
+{
+  deviconLogo ? (
+    <span
+      class:list={["skill-chip__icon", "skill-chip__icon--devicon", deviconLogo.wordmark && "skill-chip__icon--wordmark"]}
+      title={deviconLogo.title}
+      aria-hidden="true"
+    >
+      <img src={deviconLogo.src} alt="" loading="lazy" decoding="async" />
+    </span>
+  ) : (
+    simpleBrandIcon && (
+      <span
+        class="skill-chip__icon skill-chip__icon--simple"
+        style={`--skill-logo-color: #${simpleBrandIcon.hex}`}
+        title={simpleBrandIcon.title}
+        aria-hidden="true"
+      >
+        <svg class="skill-logo" viewBox="0 0 24 24">
+          <path d={simpleBrandIcon.path}></path>
+        </svg>
+      </span>
     )
-  }
-</span>
+  )
+}
